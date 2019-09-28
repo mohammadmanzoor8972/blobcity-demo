@@ -1,0 +1,91 @@
+<div class="nav has-shadow header">
+  <div class="container">
+    <div class="nav-left logo">
+      <a routerLink="/" class="nav-item"><span style="color:#FF8C00">Blob</span><span style="color:#FFF">City</span></a>
+    </div>
+
+    <span class="nav-toggle" (click)="toggleNav = !toggleNav;" [ngClass]="{'is-active': toggleNav }">
+        <span></span>
+    <span></span>
+    <span></span>
+    </span>
+
+    <div class="nav-right nav-menu" [ngClass]="{'is-active': toggleNav }" *ngIf="!canActivate">
+
+      <a routerLink="/login" class="nav-item r-item">Login</a>
+
+
+      <a routerLink="/signup" class="nav-item r-item button1">Sign Up</a>
+
+    </div>
+
+
+    <span class="nav-toggle" (click)="toggleNav = !toggleNav;" [ngClass]="{'is-active': toggleNav }" *ngIf="canActivate">
+        <span></span>
+    <span></span>
+    <span></span>
+    </span>
+
+    <div class="nav-right nav-menu" (click)="toggleNav = false;" [ngClass]="{'is-active': toggleNav }" *ngIf="canActivate">
+
+      <a routerLink="main" class="nav-item r-item">Home</a>
+      <a routerLink="/store" class="nav-item r-item">Store</a>
+      <a routerLink="bill" class="nav-item r-item">Balance: $100 </a>
+
+      <a class="nav-item" (click)="toggleDropdown = !toggleDropdown">
+            <a class="nav-item r-item">Welcome User <i class="fa" [ngClass]="{'fa-caret-up': toggleDropdown, 'fa-caret-down': !toggleDropdown }" style="margin-left: 4px;"></i></a>
+      <aside *ngIf="toggleDropdown" class="menu">
+        <ul class="menu-list">
+          <li>
+            <a routerLink="account">
+              <p>My Account</p>
+            </a>
+          </li>
+          <li>
+            <a routerLink="bill">
+              <p>Billing</p>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/login">
+              <p>LogOut</p>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<alert></alert>
+<router-outlet></router-outlet>
+
+<div class="nav has-shadow footer">
+  <div class="container">
+    <div class="nav-left nav-menu">
+      <span class="nav-item l-item">BlobCity (C) 2017 </span>
+    </div>
+
+
+
+
+    <div class="nav-right nav-menu" [ngClass]="{'is-active': toggleNavF }">
+
+      <a routerLink="/store" class="nav-item r-item">Privacy Policy</a>
+      <a routerLink="/login" class="nav-item r-item">Terms of Use</a>
+      <a routerLink="/login" class="nav-item r-item">Cancellations</a>
+      <a routerLink="/login" class="nav-item r-item">About</a>
+      <a routerLink="/login" class="nav-item r-item">Contact</a>
+
+    </div>
+    <span class="nav-toggle" (click)="toggleNavF = !toggleNavF;" [ngClass]="{'is-active': toggleNavF }">
+        <span></span>
+    <span></span>
+    <span></span>
+    </span>
+  </div>

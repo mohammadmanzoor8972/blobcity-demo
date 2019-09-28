@@ -1,0 +1,91 @@
+@import '../mq'
+
+button
+  color: white
+.nav
+  height: 50px
+  background-color: #043A62
+  a:hover
+    color: gray
+
+.logo 
+  font: helvitica
+  
+
+.logo span 
+  font-size: 1.3rem
+
+.nav-left a 
+  color: #fff
+  
+
+a.r-item
+  color:#fff
+  margin: 6px
+  padding: 0.8rem 1rem
+  +mobile
+    color: gray
+    &:hover
+      background-color: #F1F1F1
+
+.nav-toggle span
+  background-color: #C1C1C1
+
+aside.menu 
+  width: 120px
+  z-index: 1000
+  position: fixed
+  background-color: white
+  color: #252161
+  top: 52px
+  display: none
+  transition: display 500ms ease
+
+
+a.nav-item > aside.menu 
+  position: absolute
+  display: block
+
+.menu-list > li
+  border-style: none solid solid solid
+  border-width: 0.1px 0.5px 0.1px 0.5px
+
+.header 
+  position : fixed
+  top: 0px
+  width: 100vw
+  transition: all .2s
+
+
+.footer
+  height: 60px
+  background-color: #252525
+  padding: 0px
+  color: #fff
+  margin: 0px
+  position: relative
+  bottom: 0px
+  width: 100vw
+
+  .footer a.r-item
+  color:#fff!important
+  padding: 0.5rem 1.75rem!important 
+
+.button1
+  background: #ffa500
+  margin: 8px 0
+  text-align: center
+  border-radius: 5px
+  color: white
+
+.nav-right.nav-menu
+  overflow: hidden!important
+
+
+
+
+
+
+
+
+
